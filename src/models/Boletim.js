@@ -13,6 +13,7 @@ const Boletim = db.define(
         model: "alunos",
         key: "id",
       },
+      onDelete: 'CASCADE', hooks: true
     },
     turma: {
       type: DataTypes.INTEGER,

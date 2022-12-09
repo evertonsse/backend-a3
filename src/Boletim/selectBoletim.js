@@ -16,7 +16,7 @@ const selectBoletins = async (request, response) => {
             op.turma = turma
             haveFilter = true
         }
-        const where = { where: { [Op.or]: { ...op } } }
+        const where = { where: { [op.or]: { ...op } } }
         let boletins  
         if (haveFilter) { 
             boletins = await Boletim.findAll(where)

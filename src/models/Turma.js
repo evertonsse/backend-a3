@@ -10,17 +10,18 @@ const Turma = db.define(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-    }, 
-    professor : { 
-        type: DataTypes.INTEGER, 
-        references : { 
-            model: "professors", 
-            key: 'id'
-        }
-    }, 
-    disciplina : { 
-        type: DataTypes.STRING, 
-        allowNull: false 
+    },
+    professor: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "professors",
+        key: 'id'
+      },
+      onDelete: 'CASCADE', hooks: true
+    },
+    disciplina: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   { timestamps: false }
