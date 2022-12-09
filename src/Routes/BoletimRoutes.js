@@ -9,6 +9,7 @@ const BoletimRoutes = express.Router();
 
 
 
+
 BoletimRoutes.put("/boletim", (req, res) => {
     createBoletim(req, res)
 } )

@@ -5,9 +5,12 @@ const alunoRoutes = require("./Routes/AlunoRoutes")
 const professorRoutes = require("./Routes/ProfessorRoutes")
 const escolaRoutes = require("./Routes/EscolaRoutes")
 const turmaRoutes = require("./Routes/TurmaRoutes");
-const BoletimRoutes = require('./Routes/BoletimRoutes');
+const BoletimRoutes = require('./Routes/BoletimRoutes')
+const cors = require("cors");
+
 
 app = express();
+app.use(cors())
 app.use(bodyParser.json());
 
 app.use(alunoRoutes)
